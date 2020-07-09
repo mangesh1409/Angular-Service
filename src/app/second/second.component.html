@@ -1,0 +1,18 @@
+<p>second works!</p>
+
+<button (click)="getData()">Get Data</button>
+
+<table border="3" *ngIf="haveData">
+  <tr>
+    <th>SNo</th>
+    <th>Name</th>
+    <th>Fees</th>
+    <th>Duration</th>
+  </tr>
+  <tr *ngFor="let val of data; let i = index">
+    <td>{{ i + 1 }}</td>
+    <td>{{ val.Name }}</td>
+    <td>{{ val.Fees }}</td>
+    <td>{{ val.Duration }}</td>
+  </tr>
+</table>
